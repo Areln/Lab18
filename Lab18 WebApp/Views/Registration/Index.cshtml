@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<h1>Account Registration</h1>
+
+<form action="../Registration/UserSummary" method="post">
+    <ul>
+        <li>
+            <label>User Name</label>
+            <input type="text" name="UserName" placeholder="UserName" value=""/><br />
+        </li>
+        <li>
+            <label>Email</label>
+            <input type="email" name="UserEmail" placeholder="Email" value="" />
+        </li>
+        <li>
+            <label>Password</label>
+            <input type="text" name="UserPass" placeholder="Password" value="" />
+        </li>
+    </ul>
+    <input type="submit" class="btn-outline-success" value="Register" />
+</form>
+
+
