@@ -4,8 +4,19 @@
 }
 @model Lab18_WebApp.Models.RegisterUser
 
-<h1>Registration Summary</h1>
+<h1>User Details</h1>
 <p>Welcome @Model.UserName!</p>
 <p>Password: @Model.UserPass</p>
 <p>Email: @Model.UserEmail</p>
+<p>Phone: @Model.PhoneNumber</p>
+<p>Receive Emails: @Model.ReceiveNew</p>
+<p>Average Cups/Day: @Model.AvgCups</p>
+@for (int i = 0; i < Model.AvgCups; i++)
+{
+    <img src="~/Imgs/cca.jpg" height="30" width="30" title="coffee clip art" />
+}
+
+<form action="../Registration/LogOut" method="post">
+    <button type="submit" class="btn-danger">Log Out</button>
+</form>
 

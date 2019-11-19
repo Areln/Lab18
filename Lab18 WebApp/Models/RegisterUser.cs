@@ -8,13 +8,16 @@ namespace Lab18_WebApp.Models
 {
     public class RegisterUser
     {
-        [Required]
-        [MaxLength(25, ErrorMessage = "Your user name length must be between 3 and 25 characters"), MinLength(3, ErrorMessage = "Your user name length must be between 3 and 25 characters")]
+        [Required, MaxLength(25, ErrorMessage = "Your user name length must be between 3 and 25 characters"), MinLength(3, ErrorMessage = "Your user name length must be between 3 and 25 characters")]
         public string UserName { get; set; }
         [Required]
         public string UserEmail { get; set; }
         [Required, MaxLength(20, ErrorMessage = "Password must contain atleast 5 letters and 1 Number"), MinLength(6, ErrorMessage = "Password must contain atleast 5 letters and 1 Number"), RegularExpression(@".*[0-9].*", ErrorMessage = "Password must contain atleast 5 letters and 1 Number")]
         public string UserPass { get; set; }
+        [Required, RegularExpression(@"^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$", ErrorMessage = "Please enter a valid phone number")]
+        public string PhoneNumber { get; set; }
+        public bool ReceiveNew { get; set; }
+        public int AvgCups { get; set; }
 
     }
 }

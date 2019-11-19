@@ -1,10 +1,22 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+@using Newtonsoft.Json;
 
-    <div class="text-center">
-        <h1 class="display-4">Welcome</h1>
-        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    @{
 
-        <p><img src="~/Imgs/cca.jpg" height="30" width="30" title="Coffee cup" /><a asp-controller="Registration">Register Account</a><img src="~/Imgs/cca.jpg" height="30" width="30" title="Coffee cup" /></p>
-    </div>
+        string selectedUserJson = Context.Request.Cookies["SelectedUser"];
+
+        if (selectedUserJson != null)
+        {
+        <img src="~/Imgs/coffeview.jpg" alt="Coffee View" />
+        }
+        else
+        {
+            <p><img src="~/Imgs/cca.jpg" height="30" width="30" title="Coffee cup" /><a asp-controller="Registration">Register Account</a><img src="~/Imgs/cca.jpg" height="30" width="30" title="Coffee cup" /></p>
+            <p><img src="~/Imgs/cca.jpg" height="30" width="30" title="Coffee cup" /><a asp-controller="Registration" asp-action="LogInScreen">Log In</a><img src="~/Imgs/cca.jpg" height="30" width="30" title="Coffee cup" /></p>
+        }
+    }
+</div>

@@ -126,3 +126,4 @@ C:\Users\Aaron\Desktop\Important Files\GCProjects\Lab18 WebApp\Lab18 WebApp\bin\
 C:\Users\Aaron\Desktop\Important Files\GCProjects\Lab18 WebApp\Lab18 WebApp\obj\Debug\netcoreapp3.0\Lab18 WebApp.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Aaron\Desktop\Important Files\GCProjects\Lab18 WebApp\Lab18 WebApp\obj\Debug\netcoreapp3.0\Razor\Views\Registration\Index.cshtml.g.cs
 C:\Users\Aaron\Desktop\Important Files\GCProjects\Lab18 WebApp\Lab18 WebApp\obj\Debug\netcoreapp3.0\Razor\Views\Registration\UserSummary.cshtml.g.cs
+C:\Users\Aaron\Desktop\Important Files\GCProjects\Lab18 WebApp\Lab18 WebApp\obj\Debug\netcoreapp3.0\Razor\Views\Registration\LogInScreen.cshtml.g.cs

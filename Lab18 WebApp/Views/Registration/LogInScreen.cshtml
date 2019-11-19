@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewData["Title"] = "LogInScreen";
+}
+
+@model RegisterUser
+
+<h1>LogInScreen</h1>
+
+<form action="../Registration/LogInScreen" method="post">
+    <ul>
+        <li>
+            <label>User Name</label>
+            @{
+                if (Model.UserName != null)
+                {
+                    <input type="text" name="UserName" placeholder="UserName" value="@Model.UserName" /><br />
+                }
+                else
+                {
+                    <input type="text" name="UserName" placeholder="UserName" value="" /><br />
+                }
+            }
+        </li>
+        <li>
+            <label>Password</label>
+            <input type="password" name="UserPass" id="password" placeholder="Password" value="" />
+            
+            <input type="checkbox" onchange="document.getElementById('password').type = this.checked ? 'text' : 'password'">
+            <label>Show Password?</label>
+        </li>
+    </ul>
+    <input type="submit" class="btn-outline-success" value="LogIn" />
+</form>
